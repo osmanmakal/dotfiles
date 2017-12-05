@@ -11,8 +11,8 @@ alias build-source='./configure && make && sudo make install'
 alias untar='tar -zxvf'
 alias untarxz='tar -xJf'
 
-alias subl="open -a Sublime\ Text"
-alias vscode="open -a Visual\ Studio\ Code"
+alias subl='open -a Sublime\ Text'
+alias vscode='open -a Visual\ Studio\ Code'
 
 alias br='bee run'
 
@@ -64,6 +64,11 @@ function makedir() {
 
 function zombie() {
   ps aux | awk '{if ($8=="Z") { print $2 }}'
+}
+
+function ssh-key() {
+  key=$(cat $HOME/.ssh/id_rsa.pub)
+  echo "cd;echo \"$key\" >> .ssh/authorized_keys"
 }
 
 # Include ENV
