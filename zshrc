@@ -71,5 +71,12 @@ function ssh-key() {
   echo "cd;echo \"$key\" >> .ssh/authorized_keys"
 }
 
+function del-line-known_hosts() {
+  case $1 in
+    ''|*[!0-9]*) echo "not integer number";;
+    *) sed -i "$1d" ~/.ssh/known_hosts;echo "OK" ;;
+  esac
+}
+
 # Include ENV
 . $HOME/.zshenv
