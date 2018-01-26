@@ -73,7 +73,7 @@ function ssh-key() {
 
 function del-line-known_hosts() {
   case $1 in
-    ''|*[!0-9]*) echo "not integer number";;
+    ''|*[!0-9]*) echo "param not integer number!";;
     *) sed -i "$1d" ~/.ssh/known_hosts;echo "OK" ;;
   esac
 }
