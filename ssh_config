@@ -1,0 +1,8 @@
+Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+MACs hmac-md5,hmac-sha1,umac-64@openssh.com
+
+Host *
+  SendEnv LANG LC_*
+
+HostkeyAlgorithms ssh-dss,ssh-rsa
+KexAlgorithms +diffie-hellman-group1-sha1
