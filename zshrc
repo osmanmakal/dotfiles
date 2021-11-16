@@ -1,7 +1,10 @@
 export ZSH=/Users/$USER/.oh-my-zsh
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=/usr/local/bin:$PATH
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$(go env GOPATH)/bin
+export COMPOSER_MEMORY_LIMIT=-1
+export PKG_CONFIG_PATH=/opt/libvirt/lib/pkgconfig
 ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
